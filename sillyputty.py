@@ -26,8 +26,6 @@ from scipy import spatial
 # in much of this class, we use the index for a array or list as the identifier for the data
 # or cluster at hand.  thus, they should never be sorted or reordered, lest the cluster information 
 # be out of sync with the data points
-
-
 class sillyobject:
     # Constructor
     #
@@ -45,10 +43,12 @@ class sillyobject:
         
         self.last_moved_points = []
         
+        
     
     # add points to the initial data list
     def add_point(self, inputpoint):
         self.data_list.append(inputpoint)
+    
     
     
     # startup creates the array, creates the aux info arrays, and computes the cluster count
@@ -63,9 +63,6 @@ class sillyobject:
     # def change_k -- (re)builds the cluster arrays
     #
     # def cluster -- returns cluster assignment array
-    
-    
-    
     def startup(self):
     
         self.steps = 0
@@ -180,6 +177,7 @@ class sillyobject:
         
         # finally, increment the step counter
         self.steps += 1
+        
         
 
     # function that determines if the algorithm should stop
